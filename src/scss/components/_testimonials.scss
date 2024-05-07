@@ -1,0 +1,28 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.testimonials {
+  margin-top: -9rem;
+  padding: 2rem;
+  background-color: var.$white;
+
+  @include m.tablet {
+    padding: 10rem;
+  }
+}
+
+.testimonial {
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  background-color: var.$brown-clear;
+  border-radius: 2rem;
+
+  &__autor{
+    font-family: var.$cursive;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var.$primary-color;
+    text-align: right;
+  }
+}

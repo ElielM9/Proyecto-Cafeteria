@@ -1,0 +1,13 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.main {
+  background-color: var.$white;
+  padding: 2rem;
+
+  @include m.tablet {
+    position: relative;
+    margin-top: -10rem;
+    padding: 10rem;
+  }
+}

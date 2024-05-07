@@ -1,0 +1,26 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.icons {
+  margin-top: var.$separacion;
+
+  &__list {
+    @include m.tablet {
+      @include m.grid(3, 2);
+    }
+  }
+}
+
+.icon {
+  &__img {
+    margin: 0 auto;
+    width: 12rem;
+  }
+
+  &__text {
+    margin: 2rem;
+    font-family: var.$cursive;
+    font-size: 3.2rem;
+    color: var.$primary-color;
+  }
+}

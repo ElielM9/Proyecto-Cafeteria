@@ -1,0 +1,42 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.process {
+  margin-bottom: 2rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include m.tablet {
+    display: flex;
+    align-items: center;
+    gap: var.$separacion;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &__picture,
+  &__text {
+    flex: 1;
+  }
+
+  &__text {
+    margin-top: 1rem;
+  }
+
+  &__titulo {
+    margin: 0;
+    text-align: left;
+    color: var.$primary-color;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 0.5rem;
+      background-color: var.$secondary-color;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.about {
+  @include m.desktop {
+    @include m.grid(2, 5rem);
+    align-items: center;
+  }
+
+  &__img {
+    margin-bottom: 5rem;
+    transform: rotate(-6deg);
+    border: 3rem solid var.$white;
+    box-shadow: 0.9rem 1rem 0.5rem -0.7rem rgb(0 0 0 / 0.35);
+
+    @include m.desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__quote {
+    margin: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    border-left: 0.5rem solid var.$primary-color;
+  }
+}

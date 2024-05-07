@@ -1,0 +1,44 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.footer {
+  background-color: var.$primary-color;
+
+  &__contenedor {
+    padding: 5rem;
+    background-color: var.$white;
+    @include m.tablet {
+      @include m.grid(3, 2rem);
+    }
+  }
+
+  &__titulo {
+    font-size: 2.4rem;
+    font-family: var.$cursive;
+    color: var.$secondary-color;
+    margin: 0 0 1rem;
+  }
+
+  &__copy {
+    padding: 3rem;
+    text-align: center;
+    color: var.$white;
+    margin: 0;
+  }
+}
+
+.footer__box {
+  margin-bottom: var.$separacion;
+  text-align: center;
+  font-family: var.$cursive;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+
+  p,
+  a {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}

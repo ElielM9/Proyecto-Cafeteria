@@ -1,0 +1,64 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include m.tablet {
+    min-height: 70rem;
+  }
+
+  &::before {
+    content: "";
+    background-color: var.$black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  &__home {
+    background-image: url(../assets/img/headers/header_inicio.jpg);
+  }
+
+  &__about {
+    background-image: url(../assets/img/headers/header_nosotros.jpg);
+  }
+
+  &__process {
+    background-image: url(../assets/img/headers/header_proceso.jpg);
+  }
+
+  &__menu {
+    background-image: url(../assets/img/headers/header_menu.jpg);
+  }
+
+  &__gallery{
+    background-image: url(../assets/img/headers/header_galeria.jpg);
+  }
+
+  &__contact{
+    background-image: url(../assets/img/headers/header_contacto.jpg);
+  }
+
+
+  &__contenedor {
+    position: relative;
+  }
+
+  &__titulo {
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var.$white;
+
+    @include m.tablet {
+      margin-top: 10rem;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.menu {
+  padding: 15rem 2rem 20rem;
+  background-image: url(../assets/img/icons/menu_arriba.svg),
+    url(../assets/img/icons/menu_abajo.svg),
+    linear-gradient(to top, var.$primary-color);
+  background-repeat: no-repeat;
+  background-position: center 5rem, center 95%, 100%;
+  background-size: 200%;
+
+  @include m.tablet {
+    padding: 15rem 0 20rem 0;
+    background-size: 100%;
+  }
+
+  @include m.desktop {
+    background-size: 50%, 50%, 100%;
+  }
+
+  &__grid {
+    @include m.tablet {
+      @include m.grid(2, 3rem);
+    }
+  }
+
+  &__section {
+    &-titulo {
+      color: var.$white;
+    }
+  }
+}
+
+
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0 0 2rem 0;
+    color: var.$white;
+  }
+
+  &-description {
+    font-size: 2.2rem;
+    line-height: 1.5;
+  }
+
+  &-subdescription {
+    display: block;
+    color: var.$secondary-color;
+  }
+
+  &-price {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}

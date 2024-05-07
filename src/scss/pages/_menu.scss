@@ -1,0 +1,29 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.main__menu {
+  padding-bottom: 0;
+}
+
+.menu-contenido {
+  background-image: url(../assets/img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3 / 6;
+
+  @include m.phone {
+    aspect-ratio: 3 / 4;
+  }
+
+  @include m.tablet {
+    @include m.grid(2, 2rem);
+    aspect-ratio: 16 / 6;
+    background-size: 50%;
+    background-position: bottom right;
+  }
+
+  &__parrafo {
+    font-size: 2rem;
+  }
+}
