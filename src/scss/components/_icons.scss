@@ -1,13 +1,9 @@
 @use "config/variables" as var;
 @use "config/mixins" as m;
 
-.icons {
-  margin-top: var.$separacion;
-
-  &__list {
-    @include m.tablet {
-      @include m.grid(3, 2);
-    }
+.icons__list {
+  @include m.tablet {
+    @include m.grid(3, 2);
   }
 }
 

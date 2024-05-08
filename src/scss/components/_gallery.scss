@@ -1,9 +1,5 @@
 @use "config/mixins" as m;
 
-.experience {
-  margin-top: 3rem;
-}
-
 .gallery {
   @include m.grid(2, 2rem);
 

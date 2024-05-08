@@ -1,0 +1,20 @@
+@use "config/variables" as var;
+@use "config/mixins" as m;
+
+.icons {
+  margin-top: var.$separacion;
+}
+
+.experience {
+  margin-top: 3rem;
+}
+
+.testimonials {
+  margin-top: -9rem;
+  padding: 2rem;
+  background-color: var.$white;
+
+  @include m.tablet {
+    padding: 10rem;
+  }
+}
